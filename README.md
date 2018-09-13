@@ -1,3 +1,8 @@
-# KnockKnock
+# Knock! Knock! #
 
-Knock Knock is a coding test for Readify
+
+REST Edition
+The front door to a technical career at Readify.
+
+http://knockknock.readify.net/
+http://knockknock.readify.net/swagger/ui/index
