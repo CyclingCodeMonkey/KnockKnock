@@ -10,7 +10,7 @@ namespace KnockKnock.Web.Api.Controllers
         [HttpGet]
         public ActionResult<string> Get()
         {
-            return Guid.Empty.ToString();
+            return "f4e8e50f-b726-4abf-bff6-4f85fdd80dc1";
         }
     }
 }
