@@ -9,13 +9,16 @@ namespace KnockKnock.Web.Services
             if (string.IsNullOrEmpty(sentence)) return string.Empty;
 
             var length = sentence.Length;
-            var output = new StringBuilder();
-            for (var i = length - 1; i >= 0; i--)
+            var newArray = sentence.ToCharArray();
+            var j = length - 1;
+            for (var i = 0; i < j; i++, j--)
             {
-                output.Append(sentence[i]);
+                var temp = newArray[i];
+                newArray[i] = newArray[j];
+                newArray[j] = temp;
             }
 
-            return output.ToString();
+            return new string(newArray);
         }
     }
 }
