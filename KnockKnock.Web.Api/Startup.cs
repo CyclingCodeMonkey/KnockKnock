@@ -21,9 +21,9 @@ namespace KnockKnock.Web.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddTransient<IFibonacciService, FibonacciService>();
-            services.AddTransient<ITriangleService, TriangleService>();
-            services.AddTransient<IReverseWordsService, ReverseWordsService>();
+            services.AddScoped<IFibonacciService, FibonacciService>();
+            services.AddScoped<ITriangleService, TriangleService>();
+            services.AddScoped<IReverseWordsService, ReverseWordsService>();
 
             // Register the Swagger generator, defining one or more Swagger documents
             services.AddSwaggerGen(c =>

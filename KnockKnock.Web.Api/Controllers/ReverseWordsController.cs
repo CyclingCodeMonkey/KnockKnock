@@ -1,5 +1,7 @@
-﻿using KnockKnock.Web.Services;
+﻿using System.Web;
+using KnockKnock.Web.Services;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Infrastructure;
 
 namespace KnockKnock.Web.Api.Controllers
 {
@@ -17,7 +19,14 @@ namespace KnockKnock.Web.Api.Controllers
         [HttpGet]
         public ActionResult<string> Get([FromQuery] string sentence)
         {
-            return _reverseWordsService.Reverse(sentence);
+            try
+            {
+                return _reverseWordsService.Reverse(sentence);
+            }
+            catch
+            {
+                return BadRequest();
+            }
         }
     }
 }
