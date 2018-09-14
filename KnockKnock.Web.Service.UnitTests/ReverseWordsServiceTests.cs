@@ -1,7 +1,4 @@
-using System.ComponentModel.DataAnnotations;
 using System.Diagnostics.CodeAnalysis;
-using System.Net.Security;
-using System.Web;
 using KnockKnock.Web.Services;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -27,6 +24,15 @@ namespace KnockKnock.Web.Service.UnitTests
             var actual = reverseWordsService.Reverse("");
 
             Assert.AreEqual(string.Empty, actual);
+        }
+        
+        [TestMethod]
+        public void Reverse_SingleSpaceString_ShouldReturnEmptyString()
+        {
+            var reverseWordsService = new ReverseWordsService();
+            var actual = reverseWordsService.Reverse(" ");
+
+            Assert.AreEqual(" ", actual);
         }
 
         [TestMethod]
@@ -68,5 +74,4 @@ namespace KnockKnock.Web.Service.UnitTests
             Assert.AreEqual("  S  P  A  C  E  Y  ", actual);
         }
     }
-    
 }

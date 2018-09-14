@@ -9,7 +9,7 @@ namespace KnockKnock.Web.Services
 
         public string Reverse(string sentence)
         {
-            if (string.IsNullOrWhiteSpace(sentence)) return string.Empty;
+            if (string.IsNullOrEmpty(sentence)) return string.Empty;
 
             const string token = "^^|";
             const string singleSpace = " ";
