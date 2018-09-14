@@ -12,11 +12,18 @@ namespace KnockKnock.Web.Api.Controllers
         {
             _fibonacciService = fibonacciService;
         }
-        
+
         [HttpGet]
-        public long Get([FromQuery] long n)
+        public ActionResult<long> Get([FromQuery] string n)
         {
-            return _fibonacciService.Calculate(n);
+            try
+            {
+                return _fibonacciService.Calculate(n);
+            }
+            catch
+            {
+                return BadRequest();
+            }
         }
     }
 }

@@ -18,19 +18,19 @@ namespace KnockKnock.Web.Services
                 : "Isosceles";
         }
 
-        private static bool IsValidTriangle(int a, int b, int c)
+        private bool IsValidTriangle(int a, int b, int c)
         {
             if (a <= 0 || b <= 0 || c <= 0) return false;
 
             return ((a + b) > c && (a + c) > b && (b + c) > a);
         }
 
-        private static bool IsEquilateral(int a, int b, int c)
+        private bool IsEquilateral(int a, int b, int c)
         {
             return a == b && b == c;
         }
 
-        private static bool IsScalene(int a, int b, int c)
+        private bool IsScalene(int a, int b, int c)
         {
             return a != b
                    && a != c

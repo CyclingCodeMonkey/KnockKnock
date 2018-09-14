@@ -1,16 +1,19 @@
 ﻿using System;
-using System.Xml;
 
 namespace KnockKnock.Web.Services
 {
     public class FibonacciService : IFibonacciService
     {
-        public long Calculate(long count)
+        public long Calculate(string count)
         {
-            return count >= 0 ? PositiveCount(count) : NegativeCount(count);
+            long c;
+            if (!long.TryParse(count, out c)) throw new ArgumentException(nameof(count));
+            if (-92 >c || c > 92) throw new ArgumentException(nameof(count));
+
+            return c >= 0 ? PositiveCount(c) : NegativeCount(c);
         }
 
-        private static long PositiveCount(long count)
+        private long PositiveCount(long count)
         {
             long a = 0;
             long b = 1;
@@ -21,10 +24,11 @@ namespace KnockKnock.Web.Services
                 a = b;
                 b = c;
             }
+
             return a;
         }
 
-        private static long NegativeCount(long count)
+        private long NegativeCount(long count)
         {
             long a = 0;
             long b = 1;
@@ -35,6 +39,7 @@ namespace KnockKnock.Web.Services
                 a = b;
                 b = c;
             }
+
             return b;
         }
     }

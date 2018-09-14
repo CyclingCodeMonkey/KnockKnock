@@ -2,6 +2,6 @@
 {
     public interface IFibonacciService
     {
-        long Calculate(long count);
+        long Calculate(string count);
     }
 }
