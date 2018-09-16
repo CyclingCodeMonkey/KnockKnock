@@ -8,7 +8,7 @@ namespace KnockKnock.Web.Services
         {
             long c;
             if (!long.TryParse(count, out c)) throw new ArgumentException(nameof(count));
-            if (-92 >c || c > 92) throw new ArgumentException(nameof(count));
+            if (-92 >c || c > 92) throw new ArgumentOutOfRangeException();
 
             return c >= 0 ? PositiveCount(c) : NegativeCount(c);
         }

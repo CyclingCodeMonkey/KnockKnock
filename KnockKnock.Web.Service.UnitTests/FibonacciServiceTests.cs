@@ -1,4 +1,6 @@
+using System;
 using System.Diagnostics.CodeAnalysis;
+using FluentAssertions;
 using KnockKnock.Web.Services;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -144,12 +146,20 @@ namespace KnockKnock.Web.Service.UnitTests
             Assert.AreEqual(-21, actual);
         }
 
-        //[TestMethod]
-        public void Fibonacci_MinusLargeNumber_ShouldReturnException()
+        [TestMethod]
+        public void Fibonacci_MinusLargeNumber_ShouldReturnOutOfRangeException()
         {
             var fibonacciService = new FibonacciService();
-            var actual = fibonacciService.Calculate("-8");
-            Assert.AreEqual(-21, actual);
+            Action act = () => fibonacciService.Calculate("-93");
+            act.Should().Throw<ArgumentOutOfRangeException>();
+        }
+
+        [TestMethod]
+        public void Fibonacci_PositiveLargeNumber_ShouldReturnOutOfRangeException()
+        {
+            var fibonacciService = new FibonacciService();
+            Action act = () => fibonacciService.Calculate("93");
+            act.Should().Throw<ArgumentOutOfRangeException>();
         }
     }
 }
