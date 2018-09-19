@@ -7,9 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KnockKnock.Web.Api", "Knock
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KnockKnock.Web.Services", "KnockKnock.Web.Services\KnockKnock.Web.Services.csproj", "{1D3E1705-BF49-4270-803E-D36237D554DB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{C707EB38-BDD3-4EBC-91C9-ECEE97281947}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KnockKnock.Web.Service.UnitTests", "KnockKnock.Web.Service.UnitTests\KnockKnock.Web.Service.UnitTests.csproj", "{2652D6AA-62B3-4046-8469-C3669E6E0E7F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KnockKnock.Web.Service.UnitTests", "KnockKnock.Web.Service.UnitTests\KnockKnock.Web.Service.UnitTests.csproj", "{2652D6AA-62B3-4046-8469-C3669E6E0E7F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,10 +23,6 @@ Global
 		{1D3E1705-BF49-4270-803E-D36237D554DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1D3E1705-BF49-4270-803E-D36237D554DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1D3E1705-BF49-4270-803E-D36237D554DB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C707EB38-BDD3-4EBC-91C9-ECEE97281947}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C707EB38-BDD3-4EBC-91C9-ECEE97281947}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C707EB38-BDD3-4EBC-91C9-ECEE97281947}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C707EB38-BDD3-4EBC-91C9-ECEE97281947}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2652D6AA-62B3-4046-8469-C3669E6E0E7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2652D6AA-62B3-4046-8469-C3669E6E0E7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2652D6AA-62B3-4046-8469-C3669E6E0E7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
